@@ -1,7 +1,16 @@
+let sceneryPicture
+let characterPicture
+
+function preload() {
+  sceneryPicture = loadImage("src/assets/images/scenery/forest.png")
+  characterPicture = loadImage("src/assets/images/character/running.png")
+}
+
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight)
 }
 
 function draw() {
-  background(220);
+  background(sceneryPicture)
+  image(characterPicture, 0, 0, 220, 270, 0, 0)
 }
