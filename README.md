@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-	<img src="./assets/app_example.gif" alt="gif example" />
+	<img src="game.gif" alt="gif example" />
 	<a href="https://guilhermebkel.github.io/endless-runner-game">Online Demo</a>
 </p>
 
