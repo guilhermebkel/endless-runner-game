@@ -7,6 +7,7 @@ let character
 let enemy
 
 let gameSound
+let jumpSound
 
 const pictureMatrixMap = {
   littleGout: [
@@ -65,6 +66,7 @@ function preload() {
   enemyPicture = loadImage("src/assets/images/enemies/little-gout.png")
 
   gameSound = loadSound("src/assets/songs/soundtrack.mp3")
+  jumpSound = loadSound("src/assets/songs/jump.mp3")
 }
 
 function setup() {
@@ -92,7 +94,7 @@ function setup() {
     104
   )
 
-  // gameSound.loop()
+  gameSound.loop()
 
   frameRate(40)
 }
