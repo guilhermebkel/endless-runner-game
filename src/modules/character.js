@@ -24,15 +24,17 @@ class Character extends Animator {
 	}
 
 	isColliding(enemy) {
+		const precision = 0.7
+
 		const hit = collideRectRect(
 			this.x,
 			this.y,
-			this.width,
-			this.height,
+			this.width * precision,
+			this.height * precision,
 			enemy.x,
 			enemy.y,
-			enemy.width,
-			enemy.height
+			enemy.width * precision,
+			enemy.height * precision
 		)
 
 		return hit

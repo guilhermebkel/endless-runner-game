@@ -112,4 +112,8 @@ function draw() {
 
   enemy.show()
   enemy.move()
+
+  if (character.isColliding(enemy)) {
+    noLoop()
+  }
 }
