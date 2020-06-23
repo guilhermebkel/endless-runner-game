@@ -24,3 +24,16 @@ A simple endless game made during the **ImersaoGameDev** from **Alura**, to unde
 ## 🔧 Technologies
 
 - P5.js
+
+## 🛸 Challenges
+
+**1º Lesson**
+- [ ] Organizar a matriz no personagem.js, tirando os números fixos e substituindo-os por um cálculo
+- [ ] Criar a história da bruxa Hipsta. Por que ela está andando nessa floresta?
+- [ ] Fazer seus próprios sprites, criando um jogo com visual bem diferente!
+- [ ] Deixar a função de imagem mais limpa e organizada!
+
+**2º Lesson**
+- [ ] Fixe o pulo duplo em no máximo 2!
+- [ ] Faça um background com aparência 3D usando duas imagens diferentes, com velocidades diferentes. É o efeito paralaxe. Para isso, você precisa que o da frente tenha transparência
+- [ ] Coloque elementos diferentes em seu jogo: abelhas, borboletas, etc.
