@@ -1,43 +1,25 @@
-class Character {
-	constructor(picture) {
-		this.picture = picture
+class Character extends Animator {
+	constructor(matrix, picture, x, renderWidth, renderHeight, spriteWidth, spriteHeight) {
+		super(matrix, picture, x, renderWidth, renderHeight, spriteWidth, spriteHeight)
 
-		/**
-		 * Character movement pictures mapping
-		 */
-		this.matrix = [
-      [0, 0],
-      [220, 0],
-      [440, 0],
-      [660, 0],
-      [0, 270],
-      [220, 270],
-      [440, 270],
-      [660, 270],
-      [0, 540],
-      [220, 540],
-      [440, 540],
-      [660, 540],
-      [0, 810],
-      [220, 810],
-      [440, 810],
-      [660, 810],
-	 ]
-	 
-	 this.currentFrame = 0
+		this.initialY = height - this.height
+		this.y = this.initialY
+
+		this.jumpSpeed = 0
+		this.gravity = 3
 	}
 
-	show() {
-		image(this.picture, 0, height - 135, 110, 135, this.matrix[this.currentFrame][0], this.matrix[this.currentFrame][1], 220, 270)
-
-		this.animate()
+	jump() {
+		this.jumpSpeed = -30
 	}
 
-	animate() {
-		this.currentFrame++
+	applyGravity() {
+		this.y += this.jumpSpeed
+		
+		this.jumpSpeed += this.gravity
 
-		if (this.currentFrame >= this.matrix.length - 1) {
-			this.currentFrame = 0
+		if (this.y > this.initialY) {
+			this.y = this.initialY
 		}
 	}
 }
