@@ -22,4 +22,19 @@ class Character extends Animator {
 			this.y = this.initialY
 		}
 	}
+
+	isColliding(enemy) {
+		const hit = collideRectRect(
+			this.x,
+			this.y,
+			this.width,
+			this.height,
+			enemy.x,
+			enemy.y,
+			enemy.width,
+			enemy.height
+		)
+
+		return hit
+	}
 }
