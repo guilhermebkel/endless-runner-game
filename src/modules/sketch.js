@@ -102,6 +102,7 @@ function setup() {
 function keyPressed() {
   if (key === "ArrowUp") {
     character.jump()
+    jumpSound.play()
   }
 }
 
