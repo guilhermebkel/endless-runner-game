@@ -1,8 +1,9 @@
 class Character extends Animator {
-	constructor(matrix, picture, x, renderWidth, renderHeight, spriteWidth, spriteHeight) {
-		super(matrix, picture, x, renderWidth, renderHeight, spriteWidth, spriteHeight)
+	constructor(matrix, picture, x, variantY, renderWidth, renderHeight, spriteWidth, spriteHeight) {
+		super(matrix, picture, x, variantY, renderWidth, renderHeight, spriteWidth, spriteHeight)
 
-		this.initialY = height - this.height
+		this.variantY = variantY
+		this.initialY = height - this.height - this.variantY
 		this.y = this.initialY
 
 		this.jumpSpeed = 0

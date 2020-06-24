@@ -1,5 +1,7 @@
 class Animator {
-	constructor(matrix, picture, x, renderWidth, renderHeight, spriteWidth, spriteHeight) {
+	constructor(matrix, picture, x, variantY, renderWidth, renderHeight, spriteWidth, spriteHeight) {
+		this.variantY = variantY
+
 		this.matrix = matrix
 		this.picture = picture
 	
@@ -7,7 +9,7 @@ class Animator {
 		this.height = renderHeight
 	
 		this.x = x
-		this.y = height - this.height
+		this.y = height - this.height - this.variantY
 	
 		this.spriteWidth = spriteWidth
 		this.spriteHeight = spriteHeight
