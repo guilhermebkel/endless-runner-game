@@ -7,11 +7,13 @@ class Character extends Animator {
 		this.y = this.initialY
 
 		this.jumpSpeed = 0
-		this.gravity = 3
+		this.jumpHeight = 50
+
+		this.gravity = 6
 	}
 
 	jump() {
-		this.jumpSpeed = -30
+		this.jumpSpeed = -this.jumpHeight
 	}
 
 	applyGravity() {

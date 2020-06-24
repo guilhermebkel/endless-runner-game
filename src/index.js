@@ -230,7 +230,7 @@ function draw() {
     enemyInstance.move()
 
     if (character.witch.isColliding(enemyInstance)) {
-      image(picture.gameOver, width, height)
+      image(picture.gameOver, ((width / 2) - 200), (height / 3))
       noLoop()
     }
   })
