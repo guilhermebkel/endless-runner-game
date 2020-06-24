@@ -2,6 +2,10 @@ const scenery = {
   forest: null
 }
 
+const hud = {
+  score: null
+}
+
 const character = {
   witch: null
 }
@@ -27,7 +31,8 @@ const picture = {
   character: null,
   littleFlyingGout: null,
   littleGout: null,
-  troll: null
+  troll: null,
+  gameOver: null
 }
 
 const pictureMatrixMap = {
@@ -135,6 +140,7 @@ function preload() {
   picture.littleFlyingGout = loadImage("src/assets/images/enemies/little-flying-gout.png")
   picture.littleGout = loadImage("src/assets/images/enemies/little-gout.png")
   picture.troll = loadImage("src/assets/images/enemies/troll.png")
+  picture.gameOver = loadImage("src/assets/images/general/game-over.png")
 
   sound.game = loadSound("src/assets/songs/soundtrack.mp3")
   sound.jump = loadSound("src/assets/songs/jump.mp3")
@@ -195,6 +201,8 @@ function setup() {
     2500
   )
 
+  hud.score = new Score()
+
   // sound.game.loop()
 
   frameRate(40)
@@ -214,13 +222,16 @@ function draw() {
   character.witch.show()
   character.witch.applyGravity()
 
+  hud.score.show()
+  hud.score.addPoint()
+
   enemy.getAll().forEach(enemyInstance => {
     enemyInstance.show()
     enemyInstance.move()
 
     if (character.witch.isColliding(enemyInstance)) {
-      console.log("BATEU", enemyInstance)
-      // noLoop()
+      image(picture.gameOver, width, height)
+      noLoop()
     }
   })
 }
