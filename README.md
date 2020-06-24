@@ -37,3 +37,9 @@ A simple endless game made during the **ImersaoGameDev** from **Alura**, to unde
 - [ ] Fixe o pulo duplo em no máximo 2!
 - [ ] Faça um background com aparência 3D usando duas imagens diferentes, com velocidades diferentes. É o efeito paralaxe. Para isso, você precisa que o da frente tenha transparência
 - [ ] Coloque elementos diferentes em seu jogo: abelhas, borboletas, etc.
+
+**3º Lesson**
+- [ ] Configure o jogo para que tenhamos apenas um inimigo aparecendo de cada vez.
+- [ ] A colisão da Hipsta com os inimigos não está muito legal...será que conseguimos melhorar isso?
+- [ ] Crie uma tela inicial para o jogo.
+- [ ] Faça com que moedas apareçam durante o jogo e, conforme a Hipsta as pega, ela acumula mais pontos.
