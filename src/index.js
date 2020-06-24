@@ -1,9 +1,15 @@
-const item = {
-  scenery: null,
-  character: null,
-  littleFlyingGoutEnemy: null,
-  littleGoutEnemy: null,
-  trollEnemy: null
+const scenery = {
+  forest: null
+}
+
+const character = {
+  witch: null
+}
+
+const enemy = {
+  littleFlyingGout: null,
+  littleGout: null,
+  troll: null
 }
 
 const sound = {
@@ -14,9 +20,9 @@ const sound = {
 const picture = {
   scenery: null,
   character: null,
-  littleFlyingGoutEnemy: null,
-  littleGoutEnemy: null,
-  trollEnemy: null
+  littleFlyingGout: null,
+  littleGout: null,
+  troll: null
 }
 
 const pictureMatrixMap = {
@@ -118,14 +124,12 @@ const pictureMatrixMap = {
   ]
 }
 
-const enemies = []
-
 function preload() {
   picture.scenery = loadImage("src/assets/images/scenery/forest.png")
   picture.character = loadImage("src/assets/images/character/running.png")
-  picture.littleFlyingGoutEnemy = loadImage("src/assets/images/enemies/little-flying-gout.png")
-  picture.littleGoutEnemy = loadImage("src/assets/images/enemies/little-gout.png")
-  picture.trollEnemy = loadImage("src/assets/images/enemies/troll.png")
+  picture.littleFlyingGout = loadImage("src/assets/images/enemies/little-flying-gout.png")
+  picture.littleGout = loadImage("src/assets/images/enemies/little-gout.png")
+  picture.troll = loadImage("src/assets/images/enemies/troll.png")
 
   sound.game = loadSound("src/assets/songs/soundtrack.mp3")
   sound.jump = loadSound("src/assets/songs/jump.mp3")
@@ -134,9 +138,9 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight)
 
-  item.scenery = new Scenery(picture.scenery, 3)
+  scenery.forest = new Scenery(picture.scenery, 3)
 
-  item.character = new Character(
+  character.witch = new Character(
     pictureMatrixMap.character,
     picture.character,
     0,
@@ -147,9 +151,9 @@ function setup() {
     270
   )
 
-  item.littleFlyingGoutEnemy = new Enemy(
+  enemy.littleFlyingGout = new Enemy(
     pictureMatrixMap.littleFlyingGout,
-    picture.littleFlyingGoutEnemy,
+    picture.littleFlyingGout,
     width - 52,
     200,
     100,
@@ -160,9 +164,9 @@ function setup() {
     1000
   )
 
-  item.littleGoutEnemy = new Enemy(
+  enemy.littleGout = new Enemy(
     pictureMatrixMap.littleGout,
-    picture.littleGoutEnemy,
+    picture.littleGout,
     width - 52,
     30,
     52,
@@ -173,9 +177,9 @@ function setup() {
     200
   )
 
-  item.trollEnemy = new Enemy(
+  enemy.troll = new Enemy(
     pictureMatrixMap.troll,
-    picture.trollEnemy,
+    picture.troll,
     width,
     0,
     200,
@@ -193,28 +197,28 @@ function setup() {
 
 function keyPressed() {
   if (key === "ArrowUp") {
-    item.character.jump()
+    character.witch.jump()
     sound.jump.play()
   }
 }
 
 function draw() {
-  item.scenery.show()
-  item.scenery.move()
+  scenery.forest.show()
+  scenery.forest.move()
 
-  item.character.show()
-  item.character.applyGravity()
+  character.witch.show()
+  character.witch.applyGravity()
 
-  item.littleFlyingGoutEnemy.show()
-  item.littleFlyingGoutEnemy.move()
+  enemy.littleFlyingGout.show()
+  enemy.littleFlyingGout.move()
 
-  item.littleGoutEnemy.show()
-  item.littleGoutEnemy.move()
+  enemy.littleGout.show()
+  enemy.littleGout.move()
 
-  item.trollEnemy.show()
-  item.trollEnemy.move()
+  enemy.troll.show()
+  enemy.troll.move()
 
-  if (item.character.isColliding(item.littleGoutEnemy)) {
+  if (character.witch.isColliding(enemy.littleGout)) {
     // noLoop()
   }
 }
