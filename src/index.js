@@ -210,8 +210,11 @@ function setup() {
 
 function keyPressed() {
   if (key === "ArrowUp") {
-    character.witch.jump()
-    sound.jump.play()
+    const jumped = character.witch.jump()
+    
+    if (jumped) {
+      sound.jump.play()
+    }
   }
 }
 

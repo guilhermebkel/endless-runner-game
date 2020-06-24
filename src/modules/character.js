@@ -10,10 +10,22 @@ class Character extends Animator {
 		this.jumpHeight = 50
 
 		this.gravity = 6
+
+		this.jumpCount = 0
+		this.maxJumpCount = 2
 	}
 
 	jump() {
-		this.jumpSpeed = -this.jumpHeight
+		let jumped = false
+
+		if (this.jumpCount < this.maxJumpCount) {
+			this.jumpSpeed = -this.jumpHeight
+			this.jumpCount++
+
+			jumped = true
+		}
+
+		return jumped
 	}
 
 	applyGravity() {
@@ -23,6 +35,7 @@ class Character extends Animator {
 
 		if (this.y > this.initialY) {
 			this.y = this.initialY
+			this.jumpCount = 0
 		}
 	}
 
