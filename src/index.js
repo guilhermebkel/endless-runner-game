@@ -9,7 +9,12 @@ const character = {
 const enemy = {
   littleFlyingGout: null,
   littleGout: null,
-  troll: null
+  troll: null,
+  getAll() {
+    return Object.keys(this)
+      .filter(key => this[key] instanceof Enemy)
+      .map(key => this[key])
+  }
 }
 
 const sound = {
@@ -209,16 +214,13 @@ function draw() {
   character.witch.show()
   character.witch.applyGravity()
 
-  enemy.littleFlyingGout.show()
-  enemy.littleFlyingGout.move()
+  enemy.getAll().forEach(enemyInstance => {
+    enemyInstance.show()
+    enemyInstance.move()
 
-  enemy.littleGout.show()
-  enemy.littleGout.move()
-
-  enemy.troll.show()
-  enemy.troll.move()
-
-  if (character.witch.isColliding(enemy.littleGout)) {
-    // noLoop()
-  }
+    if (character.witch.isColliding(enemyInstance)) {
+      console.log("BATEU", enemyInstance)
+      // noLoop()
+    }
+  })
 }
