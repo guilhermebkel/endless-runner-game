@@ -16,4 +16,12 @@ class Enemy extends Animator {
 			this.x = width
 		}
 	}
+
+	get isNotVisible() {
+		return this.x < - this.width
+	}
+
+	addRandomSpeed() {
+		this.speed = parseInt(random(100, 400))
+	}
 }
