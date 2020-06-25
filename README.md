@@ -43,3 +43,8 @@ A simple endless game made during the **ImersaoGameDev** from **Alura**, to unde
 - [ ] A colisão da Hipsta com os inimigos não está muito legal...será que conseguimos melhorar isso?
 - [ ] Crie uma tela inicial para o jogo.
 - [ ] Faça com que moedas apareçam durante o jogo e, conforme a Hipsta as pega, ela acumula mais pontos.
+
+**4º Lesson**
+- [ ] Crie a história do seu jogo através de várias cenas diferentes, por exemplo: qual a missão da Hipsta? O que acontece se ela não chegar onde precisa?
+- [ ] Onde mais você pode colocar estado? Criar uma segunda fase, depois de ter atingido X pontos ou passado N inimigos, é um bom desafio.
+- [ ] Quer ir realmente longe: a passagem de fase poderia ser feita de forma transparente: o novo background começa a aparecer, mas encaixando no background antigo. Entao voce precisa achar imagens de background que se encaixem e que, duas ou tres passadas de tela depois, possa levar a Hipsta de uma floresta a um deserto.
