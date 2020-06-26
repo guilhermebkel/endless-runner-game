@@ -31,17 +31,17 @@ A simple endless game made during the **ImersaoGameDev** from **Alura**, to unde
 - [ ] Organizar a matriz no personagem.js, tirando os números fixos e substituindo-os por um cálculo
 - [ ] Criar a história da bruxa Hipsta. Por que ela está andando nessa floresta?
 - [ ] Fazer seus próprios sprites, criando um jogo com visual bem diferente!
-- [ ] Deixar a função de imagem mais limpa e organizada!
+- [X] Deixar a função de imagem mais limpa e organizada!
 
 **2º Lesson**
-- [ ] Fixe o pulo duplo em no máximo 2!
+- [X] Fixe o pulo duplo em no máximo 2!
 - [ ] Faça um background com aparência 3D usando duas imagens diferentes, com velocidades diferentes. É o efeito paralaxe. Para isso, você precisa que o da frente tenha transparência
 - [ ] Coloque elementos diferentes em seu jogo: abelhas, borboletas, etc.
 
 **3º Lesson**
-- [ ] Configure o jogo para que tenhamos apenas um inimigo aparecendo de cada vez.
+- [X] Configure o jogo para que tenhamos apenas um inimigo aparecendo de cada vez.
 - [ ] A colisão da Hipsta com os inimigos não está muito legal...será que conseguimos melhorar isso?
-- [ ] Crie uma tela inicial para o jogo.
+- [X] Crie uma tela inicial para o jogo.
 - [ ] Faça com que moedas apareçam durante o jogo e, conforme a Hipsta as pega, ela acumula mais pontos.
 
 **4º Lesson**
