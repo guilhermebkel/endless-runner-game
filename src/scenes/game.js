@@ -54,7 +54,9 @@ class Game {
 
 		hud.score = new Score()
 
-		// sound.game.loop()
+		hud.life = new Life(5, 5)
+
+		sound.game.loop()
 	}
 
 	keyPressed(key) {
@@ -70,6 +72,8 @@ class Game {
 	draw() {
 		scenery.forest.show()
 		scenery.forest.move()
+
+		hud.life.draw()
 
 		character.witch.show()
 		character.witch.applyGravity()
@@ -88,8 +92,13 @@ class Game {
 		}
 
 		if (character.witch.isColliding(currentEnemy)) {
-			image(picture.gameOver, ((width / 2) - 200), (height / 3))
-			noLoop()
+			character.witch.becomeInvincible()
+			hud.life.decrementLife()
+
+			if (!hud.life.isAlive) {
+				image(picture.gameOver, ((width / 2) - 200), (height / 3))
+				noLoop()
+			}
 		}
 	}
 }

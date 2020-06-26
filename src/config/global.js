@@ -8,7 +8,8 @@ const font = {
 }
 
 const hud = {
-	score: null
+  score: null,
+  life: null
 }
 
 const character = {
@@ -43,6 +44,7 @@ const sound = {
 }
 
 const picture = {
+  heart: null,
 	forest: null,
 	home: null,
   witch: null,

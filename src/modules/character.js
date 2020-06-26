@@ -13,6 +13,8 @@ class Character extends Animator {
 
 		this.jumpCount = 0
 		this.maxJumpCount = 2
+
+		this.isInvincible = false
 	}
 
 	jump() {
@@ -39,7 +41,21 @@ class Character extends Animator {
 		}
 	}
 
+	becomeInvincible() {
+		if (!this.isInvincible) {
+			this.isInvincible = true
+
+			setTimeout(() => {
+				this.isInvincible = false
+			}, 1000)
+		}
+	}
+
 	isColliding(enemy) {
+		if (this.isInvincible) {
+			return false
+		}
+
 		const precision = 0.7
 
 		const hit = collideRectRect(
