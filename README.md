@@ -27,7 +27,6 @@ A simple endless game made during the **ImersaoGameDev** from **Alura**, to unde
 
 ## 🛸 Challenges
 
-**1º Lesson**
 - [ ] Organizar a matriz no personagem.js, tirando os números fixos e substituindo-os por um cálculo
 - [ ] Criar a história da bruxa Hipsta. Por que ela está andando nessa floresta?
 - [ ] Fazer seus próprios sprites, criando um jogo com visual bem diferente!
